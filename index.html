@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>
+    les Floris Tao | Página Principal
+  </title>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <nav class="cabecalho__menu">
+      <a class="cabecalho__menu__link" href="index.html">Inicio</a></li>
+      <a class="cabecalho__menu__link" href="flores.html">Flores</a></li>
+      <a class="cabecalho__menu__link" href="especialidades.html">Especialidades</a></li>
+    </nav>
+  </header>
+  <main class="apresentacao">
+    <section class="apresentacao__conteudo">
+      <h1 class="apresentacao__conteudo__titulo">Quem somos nós
+        <strong class="titulo-blog"> les Floris Tao</strong>
+      </h1>
+      <p id="paragrafo" class="apresentacao__conteudo__paragrafo"> Um refúgio onde o equilíbrio sereno encontra a
+        elegância atemporal.
+        Nossa floricultura é um jardim onde a <strong class="destaque-texto">harmonia</strong> com a <strong
+          class="destaqueTexto">natureza</strong> guia cada criação.
+        Aqui, cada arranjo não é uma <br>imposição, mas uma conversa com a própria flor.
+        Nossas criações são despretensiosas, honrando <strong class="destaque-texto">o fluxo natural</strong> de
+        cada haste e folha,
+        celebrando <strong class="destaque-texto">a perfeição na imperfeição.</strong>
+        O resultado é uma estética que parece ter sido cuidadosamente pensada e,
+        ao mesmo tempo, livre, como se as flores tivessem sido delicadamente colhidas
+        em um jardim no auge de sua beleza.É uma celebração do belo sem excessos,
+        onde a serenidade nos guia para a paz, e a sofisticação nos convida a apreciá-la com um toque de romance.
+      </p>
+      <script>
+        let paragrafo = document.querySelector(".apresentacao__conteudo__paragrafo");
+        let tamanhoMaximo = 86;
+        let textoOriginal = paragrafo.innerHTML.trim();
+
+        let resultado = "";
+        let linhaAtual = "";
+
+        textoOriginal.split(" ").forEach((palavra) => {
+          if ((linhaAtual + palavra).replace(/<[^>]*>/g, "").length > tamanhoMaximo) {
+            resultado += linhaAtual.trim() + "<br>";
+            linhaAtual = palavra + " ";
+          } else {
+            linhaAtual += palavra + " ";
+          }
+        });
+
+        resultado += linhaAtual.trim();
+        paragrafo.innerHTML = resultado;
+      </script>
+      <div class="apresentacao__botoes">
+        <h2 class="apresentacao__botoes__subtitulo">Acesse as redes:</h2>
+        <a class="apresentacao__botoes__link" href="https://www.linkedin.com/in/valentina-sousa-318636376/">
+          <img src="./assets/linkedin.svg" alt="logo do Linkedin" style="width: 1rem; height: auto;">
+          Linkedin
+        </a>
+        <a class="apresentacao__botoes__link" href="https://github.com/ValentinaSousa">
+          <img src="./assets/github.svg" href="logo do Github" style="width: 1rem; height: auto;">
+          Github
+        </a>
+      </div>
+    </section>
+    <figure>
+      <img class="apresentacao__imagem" src="./assets/FloresFrame.png" alt="Flores brancas com folhas verdes e luz do sol"
+        style="width: 18.75rem; height: auto;">
+    </figure>
+  </main>
+  <footer>
+    <p class="rodape">© 2025 Les Floris Tao. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
