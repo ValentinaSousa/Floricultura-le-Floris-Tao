@@ -1,9 +1,9 @@
 # le Floris Tao
 
-![Capa do projeto le Floris Tao](assets/leFlorisTao_capa.png)
-
 le Floris Tao é meu primeiro projeto de desenvolvimento web, um site para a minha floricultura. 
 O projeto foi construído do zero, utilizando as habilidades que adquiri nos cursos de **HTML e CSS da Alura**
+
+![Capa do projeto le Floris Tao](assets/leFlorisTao_capa.png)
 
 ## 💻 Tecnologias Utilizadas
 
