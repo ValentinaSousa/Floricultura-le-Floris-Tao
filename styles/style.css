@@ -315,35 +315,4 @@ figcaption{
   .apresentacao__botoes__link {
     width: 100%;
   }
-}@media (min-width: 344px) and (max-width: 1200px){
-  .cabecalho__menu{
-    justify-content: center;
-  }
-  .cabecalho{
-    padding: 6%;
-  }
-  .apresentacao{
-    flex-direction: column-reverse;
-    padding: 5%;
-  }
-  .apresentacao__conteudo{
-    width: auto;
-  }
-  .apresentacao__flores{
-    flex-direction: column-reverse;
-    padding: 5%;
-  }
-
-  .apresentacao__flores__conteudo{
-    width: auto;
-  }
-
-  .apresentacao__especialidades{
-    flex-direction: column-reverse;
-    padding: 5%;
-  }
-
-  .apresentacao__especialidades__conteudo{
-    width: auto;
-  }
 }
