@@ -149,7 +149,7 @@ figure{
 }
 
 .apresentacao__imagem{
-  width:50%;
+  max-width:100%;
 }
 
 
@@ -168,8 +168,15 @@ figure{
 
 .apresentacao__flores__galeria{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1.25rem;
+}
+
+.apresentacao__flores__galeria img{
+  width: 100%;
+  max-width: 200px;
+  height: auto;
 }
 
 figcaption{
@@ -230,7 +237,85 @@ figcaption{
   font-family: var(--fonte-paragrafo);
 }
 
-@media (min-width: 344px) and (max-width: 1200px){
+/* ===== DESKTOP (acima de 1024px) ===== */
+@media (min-width: 1025px) {
+  .apresentacao,
+  .apresentacao__especialidades {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* ===== TABLET (601px a 1024px) ===== */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .cabecalho__menu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cabecalho {
+    padding: 3%;
+  }
+
+  .apresentacao,
+  .apresentacao__flores,
+  .apresentacao__especialidades {
+    flex-direction: column-reverse;
+    padding: 5%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .apresentacao__conteudo,
+  .apresentacao__flores__conteudo,
+  .apresentacao__especialidades__conteudo {
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .apresentacao__imagem {
+    max-width: 80%;
+    height: auto;
+  }
+}
+
+/* ===== MOBILE (até 600px) ===== */
+@media (max-width: 600px) {
+  .cabecalho {
+    padding: 4%;
+  }
+
+  .cabecalho__menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .apresentacao,
+  .apresentacao__flores,
+  .apresentacao__especialidades {
+    flex-direction: column-reverse;
+    padding: 5%;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .apresentacao__conteudo,
+  .apresentacao__flores__conteudo,
+  .apresentacao__especialidades__conteudo {
+    width: 100%;
+  }
+
+  .apresentacao__imagem {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .apresentacao__botoes__link {
+    width: 100%;
+  }
+}@media (min-width: 344px) and (max-width: 1200px){
   .cabecalho__menu{
     justify-content: center;
   }
@@ -258,7 +343,7 @@ figcaption{
     padding: 5%;
   }
 
-  .apresentacao__especiaidades__conteudo{
+  .apresentacao__especialidades__conteudo{
     width: auto;
   }
 }
