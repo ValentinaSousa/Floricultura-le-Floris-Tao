@@ -5,10 +5,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/style.css">
   <title>
     les Floris Tao | Página Principal
   </title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Cache-buster para o CSS e a imagem
+      const timestamp = new Date().getTime();
+      document.querySelector('link[rel="stylesheet"]').href += `?v=${timestamp}`;
+      document.querySelector('.apresentacao__imagem').src += `?v=${timestamp}`;
+
+      // Animações com pequeno atraso para visibilidade
+      setTimeout(() => {
+        const titulo = document.querySelector('.apresentacao__conteudo__titulo');
+        titulo.classList.remove("apresentacao__conteudo--escondido");
+
+        const imagem = document.querySelector('.apresentacao__imagem');
+        imagem.classList.add('animar-entrada');
+      }, 100);
+    });
+  </script>
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
@@ -21,7 +38,7 @@
   </header>
   <main class="apresentacao">
     <section class="apresentacao__conteudo">
-      <h1 class="apresentacao__conteudo__titulo">Quem somos nós
+      <h1 class="apresentacao__conteudo__titulo apresentacao__conteudo--escondido">Quem somos nós
         <strong class="titulo-blog"> les Floris Tao</strong>
       </h1>
       <p id="paragrafo" class="apresentacao__conteudo__paragrafo"> Um refúgio onde o equilíbrio sereno encontra a
@@ -70,8 +87,8 @@
       </div>
     </section>
     <figure>
-      <img class="apresentacao__imagem" src="./assets/FloresFrame.png" alt="Flores brancas com folhas verdes e luz do sol"
-        style="width: 18.75rem; height: auto;">
+      <img class="apresentacao__imagem" src="./assets/FloresFrame.png"
+        alt="Flores brancas com folhas verdes e luz do sol" style="width: 18.75rem; height: auto;">
     </figure>
   </main>
   <footer>

@@ -83,12 +83,21 @@
       </script>
     </section>
     <figure>
-      <img class="apresentacao__imagem" src="./assets/BonsaiFrame.png" alt="bonsai carregado com flores brancas" style="width: 18.75rem; height: auto;">
+      <img class="apresentacao__imagem" src="./assets/BonsaiFrame.png" alt="bonsai carregado com flores brancas"
+        style="width: 18.75rem; height: auto;">
     </figure>
   </main>
   <footer>
     <p class="rodape">© 2025 Les Floris Tao. All rights reserved.</p>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const imagem = document.querySelector('.apresentacao__imagem');
+        imagem.classList.add('animar-entrada');
+      }, 100);
+    });
+  </script>
 </body>
 
 </html>
