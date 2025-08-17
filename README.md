@@ -19,7 +19,7 @@ O projeto foi construído do zero, utilizando as habilidades que adquiri nos cur
 
 ## 🚀 Como Visualizar
 
-Você pode acessar o site diretamente através do [**le Floris Tao**](URL_DO_SEU_SITE_NO_GITHUB_PAGES).
+Você pode acessar o site diretamente através do [**le Floris Tao**]((https://github.com/ValentinaSousa/Floricultura-le-Floris-Tao/tree/main)).
 
 Se preferir, pode clonar o repositório para a sua máquina:
 
